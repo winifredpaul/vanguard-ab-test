@@ -1,2 +1,12 @@
-".ipynb_checkpoints/" 
-"*.twbr" 
+.ipynb_checkpoints/
+*.twbr
+Final Submission/
+Recovered/
+Project guidelines.txt
+Project_2_Combined_update.ipynb
+Tableau Dashboard.twbx
+Tableau Dashboard_AZ n WP.twbx
+Tableau Workbook_*.twbx
+Vanguard_Tableau.twbx
+Vanguard_ui_Project_Final_FIXED.ipynb
+data/
