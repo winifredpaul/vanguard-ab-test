@@ -24,14 +24,27 @@ The project evaluates whether the redesign:
 
 ## Data Sources
 
-The notebook loads four source files from the project GitHub repository:
+The analysis uses four source datasets:
 
 1. **Client demographics** — age, gender, tenure, number of accounts, balance, calls and logons.
 2. **Web activity — part 1** — event-level digital interactions.
 3. **Web activity — part 2** — additional event-level digital interactions.
 4. **Experiment clients** — assignment to `Control` or `Test`.
 
-The two web-activity files are combined, duplicate events are checked/removed, and timestamps are converted to datetime values.
+The source datasets used for the analysis are included in the [`data/`](./data/) folder.
+
+The two web-activity datasets are combined, duplicate events are checked/removed, and timestamps are converted to datetime values.
+
+### Data Files
+
+- [`df_final_demo.txt`](./data/df_final_demo.txt)
+- [`df_final_experiment_clients.txt`](./data/df_final_experiment_clients.txt)
+- [`df_final_web_data_pt_1.txt`](./data/df_final_web_data_pt_1.txt)
+- [`df_final_web_data_pt_2.txt`](./data/df_final_web_data_pt_2.txt)
+
+The processed event-level dataset used for the Tableau analysis is:
+
+- [`tableau_export.csv`](./data/tableau_export.csv)
 
 ## Analysis Population
 
@@ -223,27 +236,9 @@ Additional data that would strengthen a follow-up experiment includes:
 
 The redesign is promising because completion improves significantly, but the evidence does not statistically establish that the true uplift exceeds the business threshold.
 
-## Tableau Deliverable
+## Tableau Presentation & Deliverable
 
-The notebook creates an event-level Tableau-ready dataset containing:
-
-- Experiment variation.
-- Process step.
-- Client and visitor identifiers.
-- Completion status.
-- Duration information.
-- Filtered duration information.
-- Backward-transition indicators.
-- Client demographic variables.
-- Age, tenure, and balance segments.
-
-The final export is:
-
-```text
-tableau_export.csv
-```
-
-The Tableau Story presents six sections:
+The project findings are presented through the final Tableau Story. The Tableau Story serves as the presentation of the experiment analysis and includes:
 
 1. Test Design & Objectives
 2. Completion & Cost-Effectiveness
@@ -251,6 +246,14 @@ The Tableau Story presents six sections:
 4. Client Overview
 5. Project Evaluation & Limitations
 6. Results & Recommendations
+
+The final packaged Tableau workbook is:
+
+[`Vanguard_Tableau_Final.twbx`](./Vanguard_Tableau_Final.twbx)
+
+The Tableau-ready event-level dataset used by the workbook is:
+
+[`tableau_export.csv`](./data/tableau_export.csv)
 
 ## How to Run the Python Script
 
@@ -276,16 +279,26 @@ The script loads the source datasets from the project's GitHub repository, perfo
 
 Internet access is required unless the source URLs are replaced with local file paths.
 
-## Recommended Submission Structure
+## Final Submission Structure
 
 ```text
-Vanguard_UI_Project/
+vanguard-ab-test/
+├── README.md
+├── Link to Kanban board.txt
+├── Vanguard_Tableau_Final.twbx
 ├── Vanguard_UI_Project_Final.ipynb
 ├── Vanguard_UI_Project_Final.py
-├── README_Vanguard_UI_Project.md
-├── tableau_export.csv
 └── data/
-```
+    ├── df_final_demo.txt
+    ├── df_final_experiment_clients.txt
+    ├── df_final_web_data_pt_1.txt
+    ├── df_final_web_data_pt_2.txt
+    └── tableau_export.csv
+## Project Management
+
+The project Kanban board is maintained in Trello:
+
+[View the Vanguard Project Kanban Board](https://trello.com/b/mwoWVmwQ/vangard-project)
 
 ## Note on the Notebook
 
